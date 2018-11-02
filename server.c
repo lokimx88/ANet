@@ -128,6 +128,7 @@ static void readEventHandler(aeEventLoop *loop, int fd, void *data, int mask)
                 printf("decode error, %s disconnect.\n", ip_info);
                 // recv wrong data, disconnect
                 free_client(client);
+                break;
             }
         }
     } else if (readn == 0) {
